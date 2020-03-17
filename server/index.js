@@ -1,7 +1,6 @@
 "use strict";
 
 // Basic express setup:
-//ss
 
 const PORT = 8080;
 const express = require("express");
