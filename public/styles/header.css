@@ -1,9 +1,10 @@
-header {
+header#profile {
+  display: block;
   height: 400px;
   width: 100%;
   position: absolute;
   text-align: center;
-  top: 121px;
+  top: 120px;
   background-color: #f4f1ec;
   background-image: url("../images/3px-tile.png");
   /* This is mostly intended for prototyping; please download the pattern and 

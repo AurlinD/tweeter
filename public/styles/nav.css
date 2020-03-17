@@ -1,21 +1,23 @@
-nav span {
-  font-family: "Bungee";
-  padding: 1.5em;
-}
-
 nav {
-  line-height: 120px;
-  position: fixed;
+  height: 120px;
+  position: sticky;
   width: 100%;
-  z-index: 1;
+  z-index: 10;
   background-color: #4056a1;
   color: #ffff;
+  font-family: "Bungee";
+  padding: 1.5em;
+  font-size: 35px;
 }
 
-nav .right {
-  margin-left: 60%;
+nav div {
+  font-family: Source Sans Pro;
+  font-size: 24px;
+  font-weight: 700;
+  position: relative;
 }
 
-nav .bold {
-  font-style: bold;
+nav.container {
+  display: flex;
+  justify-content: space-between;
 }
