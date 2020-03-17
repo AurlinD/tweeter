@@ -1,13 +1,21 @@
-body nav span {
+nav span {
   font-family: "Bungee";
   padding: 1.5em;
 }
 
-body nav {
+nav {
   line-height: 120px;
   position: fixed;
   width: 100%;
   z-index: 1;
   background-color: #4056a1;
   color: #ffff;
+}
+
+nav .right {
+  margin-left: 60%;
+}
+
+nav .bold {
+  font-style: bold;
 }
