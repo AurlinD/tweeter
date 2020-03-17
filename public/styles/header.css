@@ -1,12 +1,21 @@
 header#profile {
-  display: block;
   height: 400px;
   width: 100%;
-  position: absolute;
-  text-align: center;
-  top: 120px;
-  background-color: #f4f1ec;
+  background-color: rgb(235, 172, 48);
   background-image: url("../images/3px-tile.png");
   /* This is mostly intended for prototyping; please download the pattern and 
 re-host for production environments. Thank you! */
+}
+
+.centered-header {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  color: #f4f1ec;
+  font-weight: 700;
+}
+
+h2 span {
+  font-family: Source Sans Pro;
+  font-weight: 300;
 }
