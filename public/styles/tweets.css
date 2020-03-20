@@ -1,11 +1,31 @@
 article.tweet {
   outline-color: #545149;
-  outline-style: solid;
+  border: 3px solid;
+  padding: 0.3em;
 }
 
 article.tweet header {
   display: flex;
   justify-content: space-between;
+  padding: 1em 0.7em;
+  padding-bottom: 0.8em;
+}
+
+article.tweet main {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5em 0.7em;
+  padding-bottom: 1.4em;
+  border-bottom: 3px solid;
+  border-color: #545149;
+  font-weight: 600;
+}
+
+article.tweet footer {
+  font-size: 0.8em;
+  font-weight: 300;
+  padding: 0.7em;
+  padding-top: 0.4em;
 }
 
 span.name {
@@ -13,5 +33,17 @@ span.name {
 }
 
 span.handler {
-  color: #979691;
+  display: none;
+}
+
+article:hover {
+  text-shadow: 1px 1px 0 #7773695d;
+  box-shadow: 5px 5px 0px #7773695d;
+}
+
+article:hover header span.handler {
+  color: #7773695d;
+  text-shadow: none;
+  font-weight: 700;
+  display: contents;
 }
