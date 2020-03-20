@@ -2,6 +2,7 @@ article.tweet {
   outline-color: #545149;
   border: 3px solid;
   padding: 0.3em;
+  margin: 0 0 1em;
 }
 
 article.tweet header {
@@ -9,6 +10,23 @@ article.tweet header {
   justify-content: space-between;
   padding: 1em 0.7em;
   padding-bottom: 0.8em;
+}
+
+article.tweet header div.nameAvatar {
+  display: inline-flex;
+  font-weight: 300;
+}
+
+span.name {
+  margin: 0 0.5em;
+}
+
+/* span.name {
+  font-weight: 300;
+} */
+
+span.handler {
+  display: none;
 }
 
 article.tweet main {
@@ -26,14 +44,6 @@ article.tweet footer {
   font-weight: 300;
   padding: 0.7em;
   padding-top: 0.4em;
-}
-
-span.name {
-  font-weight: 300;
-}
-
-span.handler {
-  display: none;
 }
 
 article:hover {
