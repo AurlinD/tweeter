@@ -1,0 +1,17 @@
+article.tweet {
+  outline-color: #545149;
+  outline-style: solid;
+}
+
+article.tweet header {
+  display: flex;
+  justify-content: space-between;
+}
+
+span.name {
+  font-weight: 300;
+}
+
+span.handler {
+  color: #979691;
+}
