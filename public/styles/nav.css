@@ -8,13 +8,16 @@ nav {
   font-family: "Bungee";
   padding: 1.5em;
   font-size: 35px;
+
+  /* required for position sticky */
+  top: 0;
 }
 
 nav div {
   font-family: Source Sans Pro;
   font-size: 24px;
   font-weight: 700;
-  /* position: relative; */
+  position: relative;
 }
 
 nav.container {
