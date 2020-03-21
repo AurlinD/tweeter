@@ -90,14 +90,13 @@ $(document).ready(function() {
     const $form = $("form");
     $form.on("submit", function(event) {
       event.preventDefault();
-      console.log("Button clicked, performing ajax call...");
       if ($("#tweet-text").val() === "") {
-        console.log("made it inside error");
-
-        alert("Please enter message");
+        $("#errorLength").slideUp(0);
+        $("#errorEmpty").slideDown();
         return;
       } else if ($("#tweet-text").val().length > 140) {
-        alert("Message has exceeded character limit!");
+        $("#errorEmpty").slideUp(0);
+        $("#errorLength").slideDown();
         return;
       } else {
         $.ajax({

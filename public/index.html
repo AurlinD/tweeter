@@ -23,6 +23,10 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
+      <!-- Icon Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
+    integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -52,6 +56,10 @@
 
     <!-- Page-specific (main) content here -->
     <main>
+      <section class="centered-alert">
+        <span id="errorEmpty" class="has-errors ">Please enter a non-empty message.</span>
+        <span id="errorLength" class="has-errors">Message has exceeded character limit!</span>
+      </section>
       <section class="new-tweet">
         <form action="/tweets/" method="POST">
           <textarea

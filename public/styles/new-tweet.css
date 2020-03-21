@@ -39,3 +39,31 @@ div.container {
 .red {
   color: red;
 }
+
+.has-errors {
+  margin: 1em;
+  padding: 1em;
+  border-radius: 0.5em;
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  color: red;
+  outline-style: double;
+}
+
+.icon-has-error {
+  color: red;
+}
+
+#errorEmpty {
+  display: none;
+}
+
+#errorLength {
+  display: none;
+}
+
+.centered-alert {
+  display: flex;
+  align-content: center;
+}
