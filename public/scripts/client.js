@@ -43,7 +43,7 @@ const renderTweets = function(tweets) {
   for (const tweet of tweets) {
     console.log(createTweetElement(tweet));
     let $tweet = createTweetElement(tweet);
-    $("#tweets-container").append($tweet);
+    $("#tweets-container").prepend($tweet);
   }
 };
 
@@ -91,10 +91,12 @@ $(document).ready(function() {
     $form.on("submit", function(event) {
       event.preventDefault();
       console.log("Button clicked, performing ajax call...");
-      if ($("tweet-text").val.length === 0) {
+      if ($("#tweet-text").val() === "") {
+        console.log("made it inside error");
+
         alert("Please enter message");
         return;
-      } else if ($("tweet-text").val.length > 140) {
+      } else if ($("#tweet-text").val().length > 140) {
         alert("Message has exceeded character limit!");
         return;
       } else {
@@ -104,7 +106,8 @@ $(document).ready(function() {
           data: $(this).serialize()
         }) // done doesn't have return value while .then does. Reset message box to empty state
           .done(function() {
-            $("#charCounter").val("");
+            $("#tweet-text").val("");
+            $("#tweet-text").text("");
             $(".counter").text(140);
             loadTweets();
           });

@@ -14,10 +14,15 @@ nav {
 }
 
 nav div {
+  font-size: 24px;
+  font-weight: 400;
+  position: relative;
+}
+
+nav span.lower {
   font-family: Source Sans Pro;
   font-size: 24px;
-  font-weight: 700;
-  position: relative;
+  font-weight: 400;
 }
 
 nav.container {
