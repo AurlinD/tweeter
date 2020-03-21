@@ -1,3 +1,5 @@
+//import { createPublicKey } from "crypto";
+
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
@@ -102,4 +104,24 @@ const createTweetElement = function(tweet) {
 
 $(document).ready(function() {
   renderTweets(data);
+
+  $(function() {
+    const $button = $("div.container input");
+    $button.on("click", function(event) {
+      event.preventDefault();
+      console.log("Button clicked, performing ajax call...");
+      $.ajax({
+        method: "POST",
+        url: "http://localhost:8080/tweets/",
+        data: $(this).serialize()
+      });
+
+      //   $.ajax("more-posts.html", { method: "POST" }).then(function(
+      //     morePostsHtml
+      //   ) {
+      //     console.log("Success: ", morePostsHtml);
+      //     $button.replaceWith(morePostsHtml);
+      //   });
+    });
+  });
 });
