@@ -3,7 +3,8 @@ nav {
   position: sticky;
   width: 100%;
   z-index: 10;
-  background-color: #4056a1;
+  background-color: rgb(235, 172, 48);
+  background-image: url("../images/45-degree-fabric-light.png");
   color: #ffff;
   font-family: "Bungee";
   padding: 1.5em;

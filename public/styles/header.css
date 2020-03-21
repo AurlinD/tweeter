@@ -2,7 +2,7 @@ header#profile {
   height: 400px;
   width: 100%;
   background-color: rgb(235, 172, 48);
-  background-image: url("../images/3px-tile.png");
+  background-image: url("../images/45-degree-fabric-light.png");
   /* This is mostly intended for prototyping; please download the pattern and 
 re-host for production environments. Thank you! */
 }
