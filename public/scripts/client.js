@@ -6,33 +6,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
-// Fake data taken from initial-tweets.json
-const data = [
-  {
-    user: {
-      name: "Newton",
-      avatars: "https://i.imgur.com/73hZDYK.png",
-      handle: "@SirIsaac"
-    },
-    content: {
-      text:
-        "If I have seen further it is by standing on the shoulders of giants"
-    },
-    created_at: 1461116232227
-  },
-  {
-    user: {
-      name: "Descartes",
-      avatars: "https://i.imgur.com/nlhLi3I.png",
-      handle: "@rd"
-    },
-    content: {
-      text: "Je pense , donc je suis"
-    },
-    created_at: 1461113959088
-  }
-];
-
 // stackoverflow code that calculates JS time;
 // JS time starts at Jan 1st, 1975
 function timeSince(date) {
@@ -75,6 +48,7 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function(tweet) {
+  // header content
   let $tweet = $("<article>").addClass("tweet");
   let $header = $("<header>");
   let $spanName = $("<span>")
@@ -90,10 +64,12 @@ const createTweetElement = function(tweet) {
   $header.append($nameAvatar);
   $header.append($spanHandler);
 
+  // actual message bieng displayed
   let $main = $("<main>").text(tweet.content.text);
   $tweet.append($header);
   $tweet.append($main);
 
+  //footer content
   let date = new Date(tweet.created_at);
   let timeElapsed = timeSince(date);
   let $footer = $("<footer>").text(`${timeElapsed} ago`);
@@ -102,26 +78,37 @@ const createTweetElement = function(tweet) {
   return $tweet;
 };
 
-$(document).ready(function() {
-  renderTweets(data);
+const loadTweets = function() {
+  $.ajax({
+    method: "GET",
+    url: "http://localhost:8080/tweets"
+  }).done(renderTweets);
+};
 
+$(document).ready(function() {
   $(function() {
-    const $button = $("div.container input");
-    $button.on("click", function(event) {
+    const $form = $("form");
+    $form.on("submit", function(event) {
       event.preventDefault();
       console.log("Button clicked, performing ajax call...");
-      $.ajax({
-        method: "POST",
-        url: "http://localhost:8080/tweets/",
-        data: $(this).serialize()
-      });
-
-      //   $.ajax("more-posts.html", { method: "POST" }).then(function(
-      //     morePostsHtml
-      //   ) {
-      //     console.log("Success: ", morePostsHtml);
-      //     $button.replaceWith(morePostsHtml);
-      //   });
+      if ($("tweet-text").val.length === 0) {
+        alert("Please enter message");
+        return;
+      } else if ($("tweet-text").val.length > 140) {
+        alert("Message has exceeded character limit!");
+        return;
+      } else {
+        $.ajax({
+          method: "POST",
+          url: "http://localhost:8080/tweets/",
+          data: $(this).serialize()
+        }) // done doesn't have return value while .then does. Reset message box to empty state
+          .done(function() {
+            $("#charCounter").val("");
+            $(".counter").text(140);
+            loadTweets();
+          });
+      }
     });
   });
 });
