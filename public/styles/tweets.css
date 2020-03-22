@@ -40,10 +40,16 @@ article.tweet main {
 }
 
 article.tweet footer {
+  display: flex;
   font-size: 0.8em;
   font-weight: 300;
   padding: 0.7em;
   padding-top: 0.4em;
+  justify-content: space-between;
+}
+
+article.tweet footer span i {
+  padding-right: 0.5em;
 }
 
 article:hover {

@@ -14,19 +14,38 @@ nav {
   top: 0;
 }
 
-nav div {
+#compose {
+  color: #ffff;
   font-size: 24px;
   font-weight: 400;
   position: relative;
+  background-color: olive;
+  background-image: url("../images/45-degree-fabric-light.png");
+  border: none;
 }
 
-nav span.lower {
+#compose span.lower {
   font-family: Source Sans Pro;
-  font-size: 24px;
-  font-weight: 400;
 }
 
 nav.container {
   display: flex;
   justify-content: space-between;
+}
+
+@-webkit-keyframes arrow-jump {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+#arrow {
+  animation: arrow-jump 1.4s infinite;
 }

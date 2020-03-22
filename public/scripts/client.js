@@ -48,7 +48,7 @@ const renderTweets = function(tweets) {
 };
 
 const createTweetElement = function(tweet) {
-  // header content
+  // HEADER
   let $tweet = $("<article>").addClass("tweet");
   let $header = $("<header>");
   let $spanName = $("<span>")
@@ -64,15 +64,26 @@ const createTweetElement = function(tweet) {
   $header.append($nameAvatar);
   $header.append($spanHandler);
 
-  // actual message bieng displayed
+  // CONTENT
   let $main = $("<main>").text(tweet.content.text);
   $tweet.append($header);
   $tweet.append($main);
 
-  //footer content
+  // FOOTER
+
+  //time
   let date = new Date(tweet.created_at);
   let timeElapsed = timeSince(date);
   let $footer = $("<footer>").text(`${timeElapsed} ago`);
+
+  let $icons = $("<span>");
+  let $flag = $("<i>").addClass("far fa-flag");
+  let $retweet = $("<i>").addClass("fas fa-retweet");
+  let $like = $("<i>").addClass("far fa-heart");
+  $icons.append($flag);
+  $icons.append($retweet);
+  $icons.append($like);
+  $footer.append($icons);
   $tweet.append($footer);
 
   return $tweet;
