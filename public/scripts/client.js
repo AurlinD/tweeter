@@ -119,9 +119,40 @@ $(document).ready(function() {
             $("#tweet-text").val("");
             $("#tweet-text").text("");
             $(".counter").text(140);
+            $("#errorLength").slideUp(0);
+            $("#errorEmpty").slideUp(0);
             loadTweets();
           });
       }
+    });
+  });
+
+  //scroll to top of page button
+  $(window).scroll(function() {
+    if ($(this).scrollTop() >= 570) {
+      $(".return-to-top").fadeIn(50); // Fade in
+    } else {
+      $(".return-to-top").fadeOut(50); //fade out
+    }
+  });
+  $(".return-to-top").click(function() {
+    // When arrow is clicked
+    $("body,html").animate(
+      {
+        scrollTop: 0 // Scroll to top of body
+      },
+      500
+    );
+    $("textarea").focus();
+  });
+
+  // write a new tweet button hide/show
+  const $btn = $("#compose");
+  const $newTweet = $(".new-tweet");
+
+  $btn.on("click", function() {
+    $newTweet.slideToggle(300, function() {
+      $("textarea").focus();
     });
   });
 });

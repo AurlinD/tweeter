@@ -3,6 +3,7 @@ article.tweet {
   border: 3px solid;
   padding: 0.3em;
   margin: 0 0 1em;
+  background-color: #f2e7d8;
 }
 
 article.tweet header {
@@ -37,6 +38,7 @@ article.tweet main {
   border-bottom: 3px solid;
   border-color: #545149;
   font-weight: 600;
+  background-color: #f2e7d8;
 }
 
 article.tweet footer {
