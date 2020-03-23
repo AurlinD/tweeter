@@ -1,0 +1,32 @@
+#default-layout {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3em 1em 0em 3em;
+}
+
+main {
+  width: 60%;
+}
+
+/* reponsive design css */
+@media screen and (max-width: 1230px) {
+  main {
+    width: 100%;
+  }
+  #default-layout {
+    padding: 0;
+  }
+  header#profile {
+    width: 100vw;
+    max-width: 100%;
+    opacity: 0.966;
+    background-color: #cf912b;
+    background-image: url("../images/45-degree-fabric-light.png");
+  }
+
+  main {
+    padding: 1em;
+  }
+}

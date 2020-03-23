@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/styles/header.css" type="text/css" />
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/media.css" type="text/css" />
 
       <!-- Icon Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
@@ -48,39 +49,42 @@
       </button>
     </nav>
 
-    <header id="profile">
-      <div>
-        <img src="/images/profile-hex.png" class="centered-header" />
-      </div>
-      <br />
-      <div>
-        <h2 class="centered-header">Aurlin <span>Dhillon</span></h2>
-      </div>
-    </header>
+    <div id = "default-layout">
+      <header id="profile">
+        <div>
+          <img src="/images/profile-hex.png" class="centered-header" />
+        </div>
+        <br />
+        <div>
+          <h2 class="centered-header">Aurlin <span>Dhillon</span></h2>
+        </div>
+      </header>
 
-    <!-- Page-specific (main) content here -->
-    <main>
-      <section class="centered-alert">
-        <span id="errorEmpty" class="has-errors ">Please enter a non-empty message.</span>
-        <span id="errorLength" class="has-errors">Message has exceeded character limit!</span>
-      </section>
-      <section class="new-tweet">
-        <form action="/tweets/" method="POST">
-          <textarea
-            wrap="off"
-            name="text"
-            id="tweet-text"
-            placeholder="What are you humming about?"
-          ></textarea>
-          <div class="container">
-            <input type="submit" value="Tweet"></input>
-            <output name="counter" class="counter">140</output>
-          </div>
-        </form>
-      </section>
+      <!-- Page-specific (main) content here -->
+      <main>
+        <section class="centered-alert">
+          <span id="errorEmpty" class="has-errors ">Please enter a non-empty message.</span>
+          <span id="errorLength" class="has-errors">Message has exceeded character limit!</span>
+        </section>
+        <section class="new-tweet">
+          <form action="/tweets/" method="POST">
+            <textarea
+              wrap="off"
+              name="text"
+              id="tweet-text"
+              placeholder="What are you humming about?"
+            ></textarea>
+            <div class="container">
+              <input type="submit" value="Tweet"></input>
+              <output name="counter" class="counter">140</output>
+            </div>
+          </form>
+        </section>
 
-      <section id="tweets-container">
-      </section>
+        <section id="tweets-container">
+        </section>
+
+      </div>
     </main>
   </body>
 </html>

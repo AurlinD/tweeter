@@ -1,7 +1,11 @@
 header#profile {
   height: 400px;
-  width: 100%;
-  background-color: olive;
+  min-width: 400px;
+  width: 35%;
+  max-width: 600px;
+  font-size: 24px;
+  padding: 2em;
+  background-color: #66440c;
   background-image: url("../images/45-degree-fabric-light.png");
   /* This is mostly intended for prototyping; please download the pattern and 
 re-host for production environments. Thank you! */
@@ -13,6 +17,7 @@ re-host for production environments. Thank you! */
   text-align: center;
   color: #f4f1ec;
   font-weight: 700;
+  max-width: 100%;
 }
 
 h2 span {
