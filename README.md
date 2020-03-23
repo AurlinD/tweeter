@@ -1,6 +1,6 @@
 # Tweeter Project
 
-A simple single-page AJAX-based Twitter clone built using HTML, CSS, JS, jQuery and AJAX on the front-end, and Node, and Express on the back-end.
+A simple single-page AJAX-based mobile friendly Twitter clone built using HTML, CSS, JS, jQuery and AJAX on the front-end, and Node, and Express on the back-end. 
 
 ## Final Product
 
