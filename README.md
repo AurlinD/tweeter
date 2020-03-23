@@ -5,8 +5,9 @@ A simple single-page AJAX-based Twitter clone built using HTML, CSS, JS, jQuery 
 ## Final Product
 
 !["Start"](docs/main.png)
-!["Scroll"](docs/main1.png)
 !["Error"](docs/error.png)
+!["mobile"](docs/main1.png)
+
 
 
 ## Getting Started
